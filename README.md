@@ -11,7 +11,7 @@ Content and demo project of the Tec Talk named »JavaScript Tooling«.
 
 #### Prerequisites
 
-* Download and install Node.js
+* Download and install Node.js which comes with [npm](https://www.npmjs.org)
 * Install the Grunt CLI globally with
 
        npm install -g grunt-cli
@@ -121,16 +121,21 @@ Auf <http://gruntjs.com/plugins> nach »coverage« suchen.
 
 ---
 
-# Changelog
+# Release Erstellung
 
-Changelog aus Git commit messages generieren.
+* Changelog aus Git commit messages generieren.
+	* <https://github.com/ericmatthys/grunt-changelog>
+* Bump version according to [semver](http://semver-ftw.org/)   
+	* <https://github.com/vojtajina/grunt-bump>
 
-* <https://github.com/vojtajina/grunt-bump>
-* <https://github.com/ericmatthys/grunt-changelog>
 
 ---
 
 # Ressourcen
+
+**LiveReload via Browser Extension**
+
+[LiveReload knowledgebase](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-)
 
 **Linkliste mit den besten Quellen**
 
