@@ -36,6 +36,7 @@ demoApp.modulName = (function() {
 	var yourPublicMethod = function(message) {
 		console.group('yourPublicMethod');
 			console.info(message);
+			debugger;
 		console.groupEnd();
 	};
 
@@ -49,6 +50,7 @@ demoApp.modulName = (function() {
 	var _yourPrivateMethod = function(message) {
 		console.group('_yourPrivateMethod');
 			console.info(message);
+			debugger;
 		console.groupEnd();
 	};
 
