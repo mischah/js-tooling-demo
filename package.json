@@ -1,0 +1,30 @@
+{
+  "name": "javascript-tooling",
+  "title": "JavaScript Tooling",
+  "description": "This Repo just demonstrates some JS Tooling with a little help of Grunt.",
+  "homepage": "https://git2.micromata.de/projects/TEC/repos/javascript-tooling",
+  "author": {
+    "name": "Michael Kühnel",
+    "email": "m.kuehnel@micromata.de",
+    "url": "http://www.micromata.de"
+  },
+  "license": "MIT",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@git2.micromata.de:7999/tec/js-tooling.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-available-tasks": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-notify": "^0.4.1",
+    "load-grunt-tasks": "^1.0.0",
+    "time-grunt": "^1.0.0"
+  }
+}
