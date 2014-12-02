@@ -7,7 +7,12 @@ Content and demo project of the Tec Talk named »JavaScript Tooling«.
 * <http://gulpjs.com>
 * <http://gruntjs.com>
 
+Further information about the differences are explained within this supreme [slide deck](https://speakerdeck.com/addyosmani/front-end-tooling-workflows).
+
+
 ### Grunt
+
+<http://gruntjs.com>
 
 #### Prerequisites
 
@@ -40,11 +45,21 @@ The dependencies for the tasks are defined within `package.json`
 
 ##### Start from the beginning
 
-Go to Git Tag `Level 1 - Empty Grunt Setup` to start from the beginning with just 2 little JavaScript files.
+Go to Git Tag `level-1` (»Level 1 - Empty Grunt Setup«) to start from the beginning with
+
+* a stupid HTML file
+* just 2 little JavaScript files
+* a pretty empty Grunt file
 
 ---
 
-##Code Linting
+## Minify and concatenate
+
+* <https://github.com/mishoo/UglifyJS2>
+* <https://github.com/gruntjs/grunt-contrib-uglify>
+* <https://github.com/gruntjs/grunt-contrib-concat>
+
+## Code Linting
 
 See Git Tag `Level 2 - Hint `
 
@@ -70,7 +85,6 @@ See Git Tag `Level 2 - Hint `
 
 Basiert auf <https://github.com/philbooth/complexity-report>
 
-
 ---
 
 ## Dev Server
@@ -90,34 +104,60 @@ Basiert auf <https://github.com/philbooth/complexity-report>
 
 <http://browserify.org> VS <http://www.requirejs.org>
 
+<http://browserifysearch.org>
+<https://github.com/jrburke/r.js>
+
 ---
 
+## Project Scaffolding
 
-# Unit Testing
+* <http://yeoman.io>
 
-## Unit Testing für alle
+---
+
+## Unit Testing
+
+### Unit Testing für alle
 
 * <http://qunitjs.com>
 * <https://github.com/gruntjs/grunt-contrib-qunit>
 
-## Unit-Tests mit »Nodeunit«
+### Unit-Tests mit »Nodeunit«
 
 * <https://github.com/caolan/nodeunit>
 * <https://github.com/gruntjs/grunt-contrib-nodeunit>
 
-Test respectively Behavior-Driven JavaScript mit Jasmine**
+### Test respectively Behavior-Driven JavaScript mit Jasmine
 
 * <https://jasmine.github.io>
 * <https://github.com/gruntjs/grunt-contrib-jasmine>
 
-**Spy/Mocking Framework**
+### Spy/Mocking Frameworks
 
 * <http://sinonjs.org>
 
 
-**Coverage**
+### Coverage
 
 Auf <http://gruntjs.com/plugins> nach »coverage« suchen.
+
+### Test runner
+
+Framework agnostic unit testing on real devices offering simple integration with Jenkins, Travis etc.
+
+<http://karma-runner.github.io>
+
+* <https://github.com/karma-runner/karma>
+* <https://github.com/karma-runner/grunt-karma>
+* <https://github.com/karma-runner/karma-coverage>
+* <https://github.com/karma-runner/karma-chrome-launcher>
+* <https://github.com/karma-runner/karma-firefox-launcher>
+* <https://github.com/karma-runner/karma-safari-launcher>
+* <https://github.com/karma-runner/karma-phantomjs-launcher>
+* <https://github.com/karma-runner/karma-qunit>
+* <https://github.com/karma-runner/karma-nodeunit>
+* <https://github.com/karma-runner/karma-jasmine>
+
 
 ---
 
