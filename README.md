@@ -239,6 +239,22 @@ Framework agnostic unit testing on real devices offering simple integration with
 
 # Ressourcen
 
+**Grunt performance measuring and boosting**
+
+* [time-grunt](https://github.com/sindresorhus/time-grunt)
+	* Display the elapsed execution time of grunt tasks
+	* Used within this repo.
+* [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks)
+	* Load multiple grunt tasks using globbing patterns
+	* Increases performance and save lines of code within your Gruntfile
+	* Used within this repo.
+* [grunt-newer](https://github.com/tschaub/grunt-newer)
+	* Configure Grunt tasks to run with newer files only.
+	* Used for the watch tasks in this repo.
+* [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent)
+	* Run grunt tasks simultaneously
+
+
 **LiveReload via Browser Extension**
 
 [LiveReload knowledgebase](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-)
