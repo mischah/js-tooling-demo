@@ -28,10 +28,12 @@ module.exports = function(grunt) {
 						'build',
 						'lint',
 						'jsdoc',
-						'plato'
+						'plato',
+						'server',
+						'checkBuild'
 					],
 					descriptions: {
-						'default': 'Default Task. Just type `grunt` for this one. Firing the dev and watch tasks for now.',
+						'default': 'Default Task. Just type `grunt` for this one. Firing the dev and server tasks for now.',
 						'watch':
 							'`grunt watch` run tasks whenever watched files changes and ' +
 							'reloads the browser with »LiveReload« plugin.',
@@ -39,11 +41,14 @@ module.exports = function(grunt) {
 						'build': '`grunt build` builds production ready sources to a »dist« directory.',
 						'lint': '`grunt lint` lints your JavaScript files.',
 						'jsdoc': '`grunt jsdoc` generates source documentation using jsdoc.',
-						'plato': '`grunt plato` generates static code analysis charts with plato.'
+						'plato': '`grunt plato` generates static code analysis charts with plato.',
+						'server': '`grunt server` starts a local dev server and runs `grunt watch`',
+						'checkBuild': '`grunt checkBuild` starts a local server to make it possible to check '+
+		'the build in the browser.',
 					},
 					groups: {
-						'Dev': ['default', 'dev', 'watch', 'lint', 'jsdoc', 'plato'],
-						'Production': ['build'],
+						'Dev': ['default', 'dev', 'watch', 'lint', 'jsdoc', 'plato', 'server'],
+						'Production': ['build', 'checkBuild'],
 					},
 					sort: [
 						'default',
@@ -52,7 +57,9 @@ module.exports = function(grunt) {
 						'watch',
 						'jsdoc',
 						'plato',
-						'build'
+						'server',
+						'build',
+						'checkBuild'
 					]
 				}
 			}
@@ -147,6 +154,33 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// Local dev server
+		connect: {
+			dev: {
+				options: {
+					port: 9001,
+					hostname: 'localhost',
+					// base: 'server',
+					open: {
+						 target: 'http://<%= connect.dev.options.hostname %>:' +
+						 '<%= connect.dev.options.port %>',
+					},
+				}
+			},
+			dist: {
+				options: {
+					port: 9002,
+					hostname: 'localhost',
+					base: 'dist',
+					keepalive: true,
+					open: {
+						 target: 'http://<%= connect.dev.options.hostname %>:' +
+						 '<%= connect.dist.options.port %>',
+					},
+				}
+			}
+		},
+
 		// watch
 		watch: {
 			options: {
@@ -179,8 +213,10 @@ module.exports = function(grunt) {
 	});
 
 	/**
-	 * List available Tasks
+	 * Register own tasks putting together existing ones
 	 */
+
+	// List available Tasks
 	grunt.registerTask('tasks',
 		'`grunt tasks` shows all tasks which are registered for use.',
 		['availabletasks']
@@ -194,9 +230,7 @@ module.exports = function(grunt) {
 		]
 	);
 
-	/**
-	 * A task for development
-	 */
+	// A task for development
 	grunt.registerTask('dev',
 		[
 			'jshint',
@@ -209,13 +243,19 @@ module.exports = function(grunt) {
 	grunt.registerTask('default',
 		[
 			'dev',
+			'server'
+		]
+	);
+
+	// Start dev server and watching files
+	grunt.registerTask('server',
+		[
+			'connect:dev',
 			'watch'
 		]
 	);
 
-	/**
-	 * A task for your production ready build
-	 */
+	// A task for your production ready build
 	grunt.registerTask('build',
 		[
 			'jshint',
@@ -224,6 +264,11 @@ module.exports = function(grunt) {
 			'uglify',
 			'processhtml'
 		]
+	);
+
+	// Start server to check production build
+	grunt.registerTask('checkBuild',
+		['connect:dist']
 	);
 
 };
