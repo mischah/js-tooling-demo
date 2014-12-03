@@ -4,8 +4,16 @@ Content and demo project of the Tec Talk named »JavaScript Tooling«.
 
 ## Build Tools
 
-* <http://gulpjs.com>
-* <http://gruntjs.com>
+* [Grunt](http://gulpjs.com) (Task runner)
+	* Based on files
+	* Configuration over code
+	* Great API for writing own Tasks
+	* probably a lower learning curve
+* [Gulp](http://gruntjs.com) (Streaming build system)
+	* Based on streams
+	* Code over configuration
+	* Easy API setup your tasks 
+	* Blazingly fast
 
 Further information about the differences are explained within this supreme [slide deck](https://speakerdeck.com/addyosmani/front-end-tooling-workflows).
 
@@ -125,12 +133,23 @@ Check Git Tag `level-4` (»Level 4 - Documentation«) to see how to handle gener
 
 ## Code complexity measuring
 
-### Plato
+Analyze and benchmark code complexity with »plato«.
 
-* <https://github.com/es-analysis/plato>
-* <https://github.com/jsoverson/grunt-plato>
+Example reports on popular projects:
 
-Basiert auf <https://github.com/philbooth/complexity-report>
+
+* [jquery](http://es-analysis.github.com/plato/examples/jquery/)
+* [grunt](http://es-analysis.github.com/plato/examples/grunt/)
+* [marionettejs](http://es-analysis.github.com/plato/examples/marionette/)
+
+See [plato](https://github.com/es-analysis/plato) and the corresponding [Grunt task](https://github.com/jsoverson/grunt-plato)
+
+
+plato is based on <https://github.com/philbooth/complexity-report>. This is place to read about how to interpret the [metrics](https://github.com/philbooth/escomplex/blob/master/README.md#metrics).
+
+Check Git Tag `level-5` (»Level 5 - Code complexity«) to see how easy it is to configure plato.
+
+**Hint:** Add your `reports` directory to version control to observe the changes in complexity during development within the team.
 
 ---
 
