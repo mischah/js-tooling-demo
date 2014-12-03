@@ -2,6 +2,8 @@
 
 Content and demo project of the Tec Talk named »JavaScript Tooling«.
 
+Sourcecode available [over here](https://git2.micromata.de/projects/FREESTYLE/repos/javascript-tooling/browse).
+
 ## Build Tools
 
 * [Grunt](http://gulpjs.com) (Task runner)
