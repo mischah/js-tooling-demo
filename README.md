@@ -59,18 +59,50 @@ Go to Git Tag `level-1` (»Level 1 - Empty Grunt Setup«) to start from the begi
 
 Performance matters. Therefore you need to minify and concatenate your JavaScript files which can be automated with Grunt
 
-Check Git Tag `level-2` (»Level 2 - Minify and concatenate«) to see how we handle these kind of tasks.
+Check Git Tag `level-2` (»Level 2 - Minify and concatenate«) to see how to handle these kind of tasks.
 
 * <https://github.com/mishoo/UglifyJS2>
 * <https://github.com/gruntjs/grunt-contrib-uglify>
 * <https://github.com/gruntjs/grunt-contrib-concat>
 
-## Code Linting
+## Linting
 
+JavaScript Linting = Quality Assurance.
 
-* <http://jslinterrors.com>
-* <http://jshint.com>
-* <http://eslint.org>
+Needed to:
+
+* Prevent syntax error
+	* eg. missing semicolons 
+* Prevent logical errors / structural problems
+	* eg. unreachable code
+* Force adherence to coding conventions
+	* eg. UpperCamelCase for constructors
+
+There are two main »competitors« when it comes to Linting:
+
+* [JSHint](http://jshint.com)
+	* Larger eco-system (editor plugins)
+	* Defaults are easier to handle
+	* Less config needed (caused by less rules)
+* [ESLint](http://eslint.org)
+	* More rules (especially stylistic issues) eg. »trailing whitespace«
+	* More flexibility (configurable → warnings vs. errors)
+	* Faster development 
+
+Both configurable via dot files within the project (team or company standards).
+
+See this slide deck of mine for details <http://de.slideshare.net/mischah/js-linting-en>
+
+### Helpful
+
+* [Linting errors described](http://jslinterrors.com)
+* [Default ESLint config](https://github.com/eslint/eslint/blob/master/conf/eslint.json)
+* [ESLint Rules](http://eslint.org/docs/rules/)
+* [Configuring ESLint](https://github.com/eslint/eslint/tree/master/docs/configuring)
+* [JSHint docs](http://jshint.com/docs/)
+* [JSHint Options](http://jshint.com/docs/options/)
+
+Check Git Tag `level-3` (»Level 3 - Linting«) to see how to handle these kind of tasks.
 
 ---
 
