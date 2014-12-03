@@ -157,7 +157,9 @@ Check Git Tag `level-5` (»Level 5 - Code complexity«) to see how easy it is to
 
 ## Dev Server
 
-* <https://github.com/gruntjs/grunt-contrib-connect>
+[grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect) is one possibility to start a static web server.
+
+Check Git Tag `level-6` (»Level 6 - Dev server«) to see whats needed to setup a local development server.
 
 ---
 
@@ -227,7 +229,7 @@ Framework agnostic unit testing on real devices offering simple integration with
 
 * <http://yeoman.io>
 
---* -
+---
 
 # Release Erstellung
 
@@ -240,6 +242,21 @@ Framework agnostic unit testing on real devices offering simple integration with
 ---
 
 # Ressourcen
+
+**Typsicheres »JavaScript« mit TypeScript**
+
+JavaScript-Development for Enterprise developers with [TypeScript](http://www.typescriptlang.org):
+
+* Strict superset of JavaScript
+* Compiles to plain JavaScript
+* Static typing
+* Class-based object orientation
+
+Related:
+
+* [Grunt task](https://github.com/TypeStrong/grunt-ts) for compiling TypeScript
+* [Grunt task](https://github.com/palantir/grunt-tslint) for linting TypeScript 
+
 
 **Grunt performance measuring and boosting**
 
@@ -259,7 +276,7 @@ Framework agnostic unit testing on real devices offering simple integration with
 
 **LiveReload via Browser Extension**
 
-[LiveReload knowledgebase](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-)
+* [LiveReload knowledgebase](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-)
 
 **Linkliste mit den besten Quellen**
 
