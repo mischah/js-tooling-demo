@@ -26,7 +26,8 @@ module.exports = function(grunt) {
 						'watch',
 						'dev',
 						'build',
-						'lint'
+						'lint',
+						'jsdoc'
 					],
 					descriptions: {
 						'default': 'Default Task. Just type `grunt` for this one. Firing the dev and watch tasks for now.',
@@ -35,10 +36,11 @@ module.exports = function(grunt) {
 							'reloads the browser with »LiveReload« plugin.',
 						'dev': '`grunt dev` runs development tasks. Only linting right now.',
 						'build': '`grunt build` builds production ready sources to a »dist« directory.',
-						'lint': '`grunt lint` lints your JavaScript files',
+						'lint': '`grunt lint` lints your JavaScript files.',
+						'jsdoc': '`grunt jsdoc` generates source documentation using jsdoc.',
 					},
 					groups: {
-						'Dev': ['default', 'dev', 'watch', 'lint'],
+						'Dev': ['default', 'dev', 'watch', 'lint', 'jsdoc'],
 						'Production': ['build'],
 					},
 					sort: [
@@ -46,6 +48,7 @@ module.exports = function(grunt) {
 						'lint',
 						'dev',
 						'watch',
+						'jsdoc',
 						'build'
 					]
 				}
@@ -116,6 +119,17 @@ module.exports = function(grunt) {
 			]
 		},
 
+		jsdoc: {
+			all: {
+				src: [
+					'assets/js/**/*.js',
+				],
+				options: {
+					destination: 'docs'
+				}
+			}
+		},
+
 		// watch
 		watch: {
 			options: {
@@ -167,7 +181,10 @@ module.exports = function(grunt) {
 	 * A task for development
 	 */
 	grunt.registerTask('dev',
-		['jshint']
+		[
+			'jshint',
+			'jsdoc'
+		]
 	);
 
 	// Default task
@@ -184,6 +201,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('build',
 		[
 			'jshint',
+			'jsdoc',
 			'uglify',
 			'processhtml'
 		]
