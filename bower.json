@@ -6,10 +6,10 @@
     "Michael Kühnel <m.kuehnel@micromata.de>"
   ],
   "license": "MIT",
-  "homepage": "https://git2.micromata.de/projects/FREESTYLE/repos/javascript-tooling",
+  "homepage": "https://github.com/mischah/js-tooling-demo",
   "repository": {
     "type": "git",
-    "url": "git@git2.micromata.de:7999/freestyle/javascript-tooling.git"
+    "url": "git@github.com:mischah/js-tooling-demo.git"
   },
   "dependencies": {
     "bootstrap": "^3.3.1",
