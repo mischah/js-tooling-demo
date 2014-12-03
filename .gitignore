@@ -57,3 +57,6 @@ reports/
 
 # sftp configuration file
 sftp-config.json
+
+### Bower ###
+libs
