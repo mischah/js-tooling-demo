@@ -108,7 +108,18 @@ Check Git Tag `level-3` (»Level 3 - Linting«) to see how to handle these kind 
 
 ## Documentation
 
-* <http://usejsdoc.org>
+Documentation via DocBlock comments as known from Javadoc.
+
+The most used tools:
+
+* [JSDoc](http://usejsdoc.org)
+	* [Grunt task](https://github.com/krampstudio/grunt-jsdoc)
+* [YUIDoc](https://yui.github.io/yuidoc/)
+	* [Grunt task](https://github.com/krampstudio/grunt-jsdoc)
+
+We are going to use JSDoc over here.
+
+Check Git Tag `level-4` (»Level 4 - Documentation«) to see how to handle generating the docs.
 
 ---
 
@@ -142,12 +153,6 @@ Basiert auf <https://github.com/philbooth/complexity-report>
 
 <http://browserifysearch.org>
 <https://github.com/jrburke/r.js>
-
----
-
-## Project Scaffolding
-
-* <http://yeoman.io>
 
 ---
 
@@ -196,6 +201,12 @@ Framework agnostic unit testing on real devices offering simple integration with
 
 
 ---
+
+## Project Scaffolding
+
+* <http://yeoman.io>
+
+--* -
 
 # Release Erstellung
 
