@@ -17,6 +17,7 @@
 	"eqnull": true,
 	"esnext": true,
 	"smarttabs": true,
+	"debug": true,
 
 	"node": true,
 	"browser": true,
