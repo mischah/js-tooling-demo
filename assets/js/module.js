@@ -80,5 +80,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	demoApp.modulName.yourPublicMethod('Hi Public.');
 });
-
-

@@ -6,6 +6,9 @@
 // JSHint settings
 /* jshint unused: false */
 
+// ESLint settings
+/* eslint no-unused-vars:0 */
+
 /**
  * The jQuery object or a jQuery set containing on or more DOM elements.
  * @typedef {Object} jQuery

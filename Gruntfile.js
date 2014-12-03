@@ -25,22 +25,25 @@ module.exports = function(grunt) {
 						'default',
 						'watch',
 						'dev',
-						'build'
+						'build',
+						'lint'
 					],
 					descriptions: {
-						'default': 'Default Task. Just type `grunt` for this one. Firing the build and watch tasks for now.',
+						'default': 'Default Task. Just type `grunt` for this one. Firing the dev and watch tasks for now.',
 						'watch':
-							'`grunt watch` run tasks whenever watched files change and ' +
-							'Reloads the browser with »LiveReload« plugin.',
-						'dev': '`grunt dev` will run development tasks. Will be defined later',
+							'`grunt watch` run tasks whenever watched files changes and ' +
+							'reloads the browser with »LiveReload« plugin.',
+						'dev': '`grunt dev` runs development tasks. Only linting right now.',
 						'build': '`grunt build` builds production ready sources to a »dist« directory.',
+						'lint': '`grunt lint` lints your JavaScript files',
 					},
 					groups: {
-						'Dev': ['default', 'dev', 'watch'],
+						'Dev': ['default', 'dev', 'watch', 'lint'],
 						'Production': ['build'],
 					},
 					sort: [
 						'default',
+						'lint',
 						'dev',
 						'watch',
 						'build'
@@ -94,6 +97,25 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// jsHint
+		jshint: {
+			options: {
+				reporter: require('jshint-stylish'),
+				jshintrc: '.jshintrc',
+			},
+			all: [
+				'Gruntfile.js',
+				'assets/js/**/*.js'
+			]
+		},
+
+		eslint: {
+			target: [
+				'Gruntfile.js',
+				'assets/js/**/*.js'
+			]
+		},
+
 		// watch
 		watch: {
 			options: {
@@ -101,7 +123,7 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: ['assets/js/**/*.js'],
-				tasks: ['newer:uglify'],
+				tasks: ['newer:jshint', 'newer:uglify'],
 				options: {
 					spawn: false
 				}
@@ -115,7 +137,7 @@ module.exports = function(grunt) {
 			},
 			gruntfile: {
 				files: ['Gruntfile.js'],
-				tasks: [],
+				tasks: ['jshint'],
 				options: {
 					spawn: false
 				}
@@ -133,17 +155,25 @@ module.exports = function(grunt) {
 		['availabletasks']
 	);
 
+	// Lint files
+	grunt.registerTask('lint',
+		[
+			'jshint',
+			'eslint'
+		]
+	);
+
 	/**
 	 * A task for development
 	 */
 	grunt.registerTask('dev',
-		[]
+		['jshint']
 	);
 
 	// Default task
 	grunt.registerTask('default',
 		[
-			'build',
+			'dev',
 			'watch'
 		]
 	);
@@ -153,6 +183,7 @@ module.exports = function(grunt) {
 	 */
 	grunt.registerTask('build',
 		[
+			'jshint',
 			'uglify',
 			'processhtml'
 		]
