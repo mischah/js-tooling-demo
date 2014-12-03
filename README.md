@@ -14,6 +14,8 @@ Further information about the differences are explained within this supreme [sli
 
 <http://gruntjs.com>
 
+Source → Magic happens → Destination 
+
 #### Prerequisites
 
 * Download and install Node.js which comes with [npm](https://www.npmjs.org)
@@ -55,13 +57,13 @@ Go to Git Tag `level-1` (»Level 1 - Empty Grunt Setup«) to start from the begi
 
 ## Minify and concatenate
 
+Check Git Tag `level-2` (»Level 2 - Minify and concatenate«) to see how we handle these kind of tasks.
+
 * <https://github.com/mishoo/UglifyJS2>
 * <https://github.com/gruntjs/grunt-contrib-uglify>
 * <https://github.com/gruntjs/grunt-contrib-concat>
 
 ## Code Linting
-
-See Git Tag `Level 2 - Hint `
 
 
 * <http://jslinterrors.com>
