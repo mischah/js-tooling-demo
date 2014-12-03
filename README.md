@@ -1,20 +1,23 @@
-#JS Tooling
+#JavaScript Tooling
 
-Content and demo project of the Tec Talk named »JavaScript Tooling«.
 
-* Sourcecode available [over here](https://github.com/mischah/js-tooling-demo)
-* Slides [over here](https://github.com/mischah/js-tooling-slides)
+
+Content and demo project of an internal Tec Talk at [Micromata](http://www.micromata.de) named »JavaScript Tooling – Grunt, Bower, Yeoman and stuff …« 
+
+You can find the slides [over here](http://michael-kuehnel.de/presentations/javascript-tooling-with-grunt-bower-yeoman/).
+
+Have fun :octocat:
 
 ---
 
 ## Level 1 – Build Tools
 
-* [Grunt](http://gulpjs.com) (Task runner)
+* [Grunt](http://gruntjs.com) (Task runner)
 	* Based on files
 	* Configuration over code
 	* Great API for writing own Tasks
 	* probably a lower learning curve
-* [Gulp](http://gruntjs.com) (Streaming build system)
+* [Gulp](http://gulpjs.com) (Streaming build system)
 	* Based on streams
 	* Code over configuration
 	* Easy API setup your tasks 
