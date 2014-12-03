@@ -27,7 +27,8 @@ module.exports = function(grunt) {
 						'dev',
 						'build',
 						'lint',
-						'jsdoc'
+						'jsdoc',
+						'plato'
 					],
 					descriptions: {
 						'default': 'Default Task. Just type `grunt` for this one. Firing the dev and watch tasks for now.',
@@ -38,9 +39,10 @@ module.exports = function(grunt) {
 						'build': '`grunt build` builds production ready sources to a »dist« directory.',
 						'lint': '`grunt lint` lints your JavaScript files.',
 						'jsdoc': '`grunt jsdoc` generates source documentation using jsdoc.',
+						'plato': '`grunt plato` generates static code analysis charts with plato.'
 					},
 					groups: {
-						'Dev': ['default', 'dev', 'watch', 'lint', 'jsdoc'],
+						'Dev': ['default', 'dev', 'watch', 'lint', 'jsdoc', 'plato'],
 						'Production': ['build'],
 					},
 					sort: [
@@ -49,6 +51,7 @@ module.exports = function(grunt) {
 						'dev',
 						'watch',
 						'jsdoc',
+						'plato',
 						'build'
 					]
 				}
@@ -130,6 +133,20 @@ module.exports = function(grunt) {
 			}
 		},
 
+		plato: {
+			options: {
+				 jshint: grunt.file.readJSON('.jshintrc')
+			},
+			all: {
+				files: {
+					'reports/': [
+						'assets/js/**/*.js',
+						'test/**/*.js'
+					]
+				}
+			}
+		},
+
 		// watch
 		watch: {
 			options: {
@@ -137,7 +154,7 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: ['assets/js/**/*.js'],
-				tasks: ['newer:jshint', 'newer:uglify'],
+				tasks: ['newer:jshint'],
 				options: {
 					spawn: false
 				}
@@ -183,7 +200,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('dev',
 		[
 			'jshint',
-			'jsdoc'
+			'jsdoc',
+			'plato'
 		]
 	);
 
@@ -202,6 +220,7 @@ module.exports = function(grunt) {
 		[
 			'jshint',
 			'jsdoc',
+			'plato',
 			'uglify',
 			'processhtml'
 		]

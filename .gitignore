@@ -35,6 +35,8 @@ node_modules
 dist/
 # Genarated docs
 docs/
+# Plato reports
+reports/
 
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
 .tmp/
